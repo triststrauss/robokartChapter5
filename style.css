@@ -54,7 +54,7 @@ select, button {cursor: pointer; border: black solid 1px;}
 
 #blocklyDiv {
   position: center;
-  height: 600px;
+  height: 400px;
   max-width: 1000px;
   width: 50vw;
 
