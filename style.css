@@ -1,0 +1,165 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Comfortaa', cursive;
+}
+body {
+  background-position: center top;
+  background-repeat: no-repeat;
+  
+  background-size: cover;
+  background-color: #000;
+
+  padding: 2em 0;
+}
+select, button {cursor: pointer; border: black solid 1px;}
+
+#top-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#chapter-lesson-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+#chapter-lesson-wrapper > select {
+  font-size: 1.3em;
+  margin: 0 0.2em;
+  padding: 0.2em 0.2em;
+}
+
+#description-text {
+  margin: 1em 0.5em;
+  padding: 0.5em 1em;
+  max-width: 700px;
+  border-radius: 10px;
+  text-align:center;
+  font-size: 1.2em;
+  color: rgb(228, 228, 228);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#main-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#blocklyDiv {
+  position: center;
+  height: 600px;
+  max-width: 1000px;
+  width: 50vw;
+
+  box-shadow: 0px 0px 40px 20px #0ff;
+}
+.blocklySvg {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+#controls-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  flex-wrap: wrap;
+  
+  min-height: 2em;
+  margin: 0.5em 0 1em;
+}
+#run-btn {
+  background-color: rgb(148, 221, 248);
+  flex-grow: 2;
+  font-size: 1.2em;
+  padding: 0.5em 0;
+  margin-right: 0.5em;
+}
+#run-btn:hover {
+  background-color: rgb(185, 233, 251);
+}
+
+/*#canvas{*/
+/*  outline: rgb(32, 32, 32) 4px solid;*/
+/*}*/
+
+#modal {
+  position: fixed;
+  top: 0; left: 0;
+  height: 100vh; width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+
+  /*display: flex;*/
+  align-items: center;
+  justify-content: center;
+  
+    color: rgb(41, 41, 41);
+}
+#success-content, #failure-content, #end-content, #tip-content, #character-select-content {
+  position:relative;
+  background-color: rgb(236, 236, 236);
+  padding: 1.5em;
+  max-width: 400px;
+  left:38%;
+  top:38%;
+}
+.buttons-container {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-around;
+}
+.buttons-container > button {
+  padding: 0.3em 1em;
+  font-size: 1.2em;
+  background-color: rgb(41, 41, 41);
+  color: rgb(236, 236, 236);
+}
+.buttons-container > button:hover {
+  background-color: rgb(68, 68, 68);
+}
+
+#tip{
+cursor:pointer;
+}
+#tip-image {
+	position: absolute;
+}
+
+@media screen and (max-width: 1000px) {
+
+  #main-wrapper {
+    flex-direction: column;
+  }
+
+  #controls-wrapper > select {
+    font-size: 0.8em;
+  }
+
+  #blocklyDiv {
+    max-width: 500px;
+    width: 100vw;
+  }
+}
+.d-none{
+	display:none !important;
+}
+
+#glow,#glow2,#glow3 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow:
+          0 0 60px 30px #fff,  /* inner white */
+          0 0 100px 60px #f0f, /* middle magenta */
+          0 0 140px 90px #0ff; /* outer cyan */
+
+  /* in order: x offset, y offset, blur size, spread size, color */
+  /* blur size and spread size are optional (they default to 0) */
+}

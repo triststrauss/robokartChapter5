@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Chapter 5</title>
+  <script src="blockly/blockly_compressed.js"></script>
+  <script src="blockly/javascript_compressed.js"></script>
+  <script src="blockly/blocks_compressed.js"></script>
+  <script src="blockly/msg/js/en.js"></script>
+  <script src="blockly/msg/js/en.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" type="image/png" href="img/rupees/5Rupee.png">
+</head>
+<body>
+<div id="glow"></div>
+
+ <div id="top-div" class="">
+      <div id="chapter-lesson-wrapper">
+        <select id="lesson-select" onchange="changeLesson()" onload="changeLesson">
+		<option value="1" selected>Lesson 1</option>
+		<option value="2">Lesson 2</option>
+		<option value="3">Lesson 3</option>
+		<option value="4">Lesson 4</option>
+		<option value="5">Lesson 5</option>
+		<option value="6">Lesson 6</option>
+		<option value="7">Lesson 7</option>
+		<option value="8">Lesson 8</option>
+		</select>  
+      </div>
+      <p id="description-text"></p>
+    </div>
+
+<div id="main-wrapper">
+
+ <div id="blockly-wrapper">
+        <div id="blocklyDiv"></div>
+		
+        <div id="controls-wrapper">
+
+          <button id="run-btn" onclick="run()">Run</button>
+
+<!--		   <select id="character-select" onchange="selectCharacter(3)">-->
+<!--            <option value="1">Businessman</option>-->
+<!--            <option value="2" selected>Carton Boy</option>-->
+<!--          </select>-->
+<!--          <select id="speed-select">-->
+<!--            <option value="3">Speed: slow</option>-->
+<!--            <option value="0" selected>Speed: normal</option>-->
+<!--            <option value="-3">Speed: fast</option>-->
+<!--          </select>-->
+        </div>
+      </div>
+	  
+ <div id="modal" hidden>
+      <div id="success-content" hidden>
+        <p><center>You've completed the objective, are you ready for the next lesson?</center></p>
+        <div class="buttons-container">
+          <button onclick="changeLesson(current_lesson)">No</button>
+          <button onclick="changeLesson(current_lesson+1)">Yes</button>
+        </div>
+      </div>
+      <div id="failure-content" hidden>
+        <p><center>You have not completed the objective, please retry.<br>
+		   Click on the <img id="tip" title="Click here to show the hint!" src="img/items/light_bulb.png"onclick="displayTip(current_lesson)"/> to show the hint!</center>
+		</p>
+        <div class="buttons-container">
+          <button onclick="changeLesson(current_lesson)">Okay</button>
+        </div>
+      </div>
+      <div id="end-content" hidden>
+        <p><center>Congrats, you have completed all the lessons!</center></p>
+        <div class="buttons-container">
+          <button onclick="changeLesson(current_lesson)">Okay</button>
+        </div>
+      </div>
+	  <div id="tip-content" hidden>
+        <p id="tip_text"></p>
+        <div class="buttons-container">
+          <button onclick="changeLesson(current_lesson)">Okay</button>
+        </div>
+      </div>
+	  <div id="character-select-content" hidden>
+        <p><center>Please, select your character</center></p>
+        <div class="buttons-container">
+          <img src='img/sprites/option1/sprite1.png' style="cursor:pointer;" onclick="selectCharacter(1)"/>
+          <img src='img/sprites/option2/sprite1.png' style="cursor:pointer;" onclick="selectCharacter(2)"/>
+        </div>
+      </div>
+    </div>
+	  
+<!--<canvas id="canvas" height="500" width="500" oncontextmenu="return false;"><canvas>-->
+		
+<xml id="toolbox" style="display: flex;">
+    <block type="block_note"></block>
+    <block type="block_guitar"></block>
+    <block type="block_drum"></block>
+    <block type="block_trumpet"></block>
+    <block type="block_glow"></block>
+    <block type="repeater"></block>
+
+</xml>		
+
+  <script src="party.js"></script>
+
+<script>
+
+var options = { 
+	toolbox : toolbox, 
+	collapse : true, 
+	maxBlocks : Infinity, 
+	trashcan : true, 
+	horizontalLayout : false, 
+	toolboxPosition : 'start', 
+	css : true, 
+	scrollbars : true, 
+	sounds : true, 
+	oneBasedIndex : true, 
+	zoom : {
+		controls : true, 
+		wheel : true, 
+		startScale : 0.8, 
+		maxScale : 3, 
+		minScale : 0.3, 
+		scaleSpeed : 1.2
+	}
+};
+
+  var workspace = Blockly.inject('blocklyDiv', options,
+      {toolbox: document.getElementById('toolbox')});
+</script>
+
+</div>
+</body>
+</html>
