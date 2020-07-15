@@ -4,6 +4,7 @@
   font-family: 'Comfortaa', cursive;
 }
 body {
+  background-image: url("img/bg.jpg");
   background-position: center top;
   background-repeat: no-repeat;
   
