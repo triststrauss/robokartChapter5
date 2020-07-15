@@ -649,22 +649,22 @@ warrior = new Sprite(0, 0);
 
 var hero = new Image();
 
-var street_upper_left = new Image();
-var street_upper = new Image();
-var street_upper_right = new Image();
-var street_right = new Image();
-var street_bottom_right = new Image();
-;
-var street_bottom = new Image();
-var street_bottom_left = new Image();
-var street_left = new Image();
-var street_center = new Image();
-
-var rupee1 = new Image();
-var rupee2 = new Image();
-var rupee5 = new Image();
-var rupee10 = new Image();
-var rupee100 = new Image();
+// var street_upper_left = new Image();
+// var street_upper = new Image();
+// var street_upper_right = new Image();
+// var street_right = new Image();
+// var street_bottom_right = new Image();
+// ;
+// var street_bottom = new Image();
+// var street_bottom_left = new Image();
+// var street_left = new Image();
+// var street_center = new Image();
+//
+// var rupee1 = new Image();
+// var rupee2 = new Image();
+// var rupee5 = new Image();
+// var rupee10 = new Image();
+// var rupee100 = new Image();
 
 var baloon = new Image();
 var cricket_bat = new Image();
@@ -676,21 +676,21 @@ var talkR = new Image();
 var displayTalk = false;
 var talkCount = 0;
 
-street_upper_left.src = 'img/street/upper_left.png';
-street_upper.src = 'img/street/upper.png';
-street_upper_right.src = 'img/street/upper_right.png';
-street_right.src = 'img/street/right.png';
-street_bottom_right.src = 'img/street/bottom_right.png';
-street_bottom.src = 'img/street/bottom.png';
-street_bottom_left.src = 'img/street/bottom_left.png';
-street_left.src = 'img/street/left.png';
-street_center.src = 'img/street/center.png';
-
-rupee1.src = 'img/rupees/1Rupee.png'
-rupee2.src = 'img/rupees/2Rupee.png'
-rupee5.src = 'img/rupees/5Rupee.png'
-rupee10.src = 'img/rupees/10Rupee.png'
-rupee100.src = 'img/rupees/100Rupee.png'
+// street_upper_left.src = 'img/street/upper_left.png';
+// street_upper.src = 'img/street/upper.png';
+// street_upper_right.src = 'img/street/upper_right.png';
+// street_right.src = 'img/street/right.png';
+// street_bottom_right.src = 'img/street/bottom_right.png';
+// street_bottom.src = 'img/street/bottom.png';
+// street_bottom_left.src = 'img/street/bottom_left.png';
+// street_left.src = 'img/street/left.png';
+// street_center.src = 'img/street/center.png';
+//
+// rupee1.src = 'img/rupees/1Rupee.png'
+// rupee2.src = 'img/rupees/2Rupee.png'
+// rupee5.src = 'img/rupees/5Rupee.png'
+// rupee10.src = 'img/rupees/10Rupee.png'
+// rupee100.src = 'img/rupees/100Rupee.png'
 
 baloon.src = 'img/items/baloon.png';
 cricket_bat.src = 'img/items/cricket_bat.png';
