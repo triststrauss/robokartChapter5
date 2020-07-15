@@ -596,35 +596,35 @@ function displayTask(index) {
 
     switch (index) {
         case 0:
-            description.innerHTML = 'Could you help me collect the 1 Rupee coin, please? Use arrows to move the character and "repeat" to create a loop.';
+            description.innerHTML = 'Select instrument and play one sound.';
             break;
 
         case 1:
-            description.innerHTML = "I can't tell which of these two is the 2 Rupee coin. Please, help me and take the correct one!";
+            description.innerHTML = "Select instrument and play 3-4 sounds.";
             break;
 
         case 2:
-            description.innerHTML = "I need the 5 Rupee coin to pay for the snack, but I've scattered all my money on the ground... Please, help me find it.";
+            description.innerHTML = "Add two instrument and play one sound of each instrument.";
             break;
 
         case 3:
-            description.innerHTML = "Somewhere on the ground here is the 10 Rupee note, but I have no idea where... Would you take it for me, please?";
+            description.innerHTML = "Add two instrument and play three sounds of each instrument.";
             break;
 
         case 4:
-            description.innerHTML = "The car, that i want to buy costs 100 Rupee. Could you please collect the note, which I can pay for it with?";
+            description.innerHTML = "Add two instrument and play three sounds of each instrument and change background.";
             break;
 
         case 5:
-            description.innerHTML = "You've been really helpful so far, thanks! You're now able the buy a Baloon yourself. It costs 10 Rupee, so first collect the funds!";
+            description.innerHTML = "Add two instrument and play three sounds of each instrument and change background and change lighting effect.";
             break;
 
         case 6:
-            description.innerHTML = "There are two more things you need to purchase. A Cricket Bat worth 20 Rupee and a Watch worth 10 Rupee. Collect the money from the coins and notes spread all over the ground.";
+            description.innerHTML = "Play melody like happy birthday.";
             break;
 
         case 7:
-            description.innerHTML = "I've got one more task for you. Please, collect enough money to buy a bicycle worth 14 Rupee, but you won't receive a change, so make sure that the amount you've gathered is exactly 14 Rupee!";
+            description.innerHTML = "";
             break;
     }
     description.innerHTML += '&nbsp;<img id="tip" title="Click here to show the hint!" src="img/items/light_bulb.png"onclick="displayTip(current_lesson)"/>'
@@ -748,8 +748,12 @@ var actionQ = [];
 var cursor = 0;
 
 var glow = document.getElementById("blocklyDiv");
+var glowObj = document.getElementById("glow");
 
 function changeGlow(color)
 {
     glow.style.boxShadow = "0px 0px 40px 20px "+ color;
+    glowObj.style.boxShadow = "0 0 60px 30px #fff,  /* inner white */\n" +
+        "          0 0 100px 60px #f0f, /* middle magenta */\n" +
+        "          0 0 140px 90px " + color;
 }
